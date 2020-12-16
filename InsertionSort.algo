@@ -1,0 +1,14 @@
+ALGORITHM insertSort
+
+PROCEDURE sorting(var arr1: ARRAY_OF INTEGER[10];)
+BEGIN
+for(var i =1;i<arr1.length;i++){
+    var pointedat=arr1[i];
+    var first_elem= i-1;
+    WHILE ((first_elem>=0)&&(arr1[first_elem]>pointedat)) DO
+        arr1[first_elem+1]=arr1[first_elem];
+        first_elem--;
+    END_WHILE
+    arr1[first_elem+1]=pointedat;
+}    
+END
